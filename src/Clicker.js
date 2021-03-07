@@ -4,6 +4,11 @@ class Clicker extends Component {
   constructor(props) {
     super(props);
     this.state = { num: 1 };
+    this.genRandom = this.genRandom.bind(this);
+  }
+  genRandom() {
+    let rand = Math.floor(Math.random() * 10) + 1; //pick random number 1-10
+    this.setState({ num: rand }); //update state with new rand
   }
   render() {
     return (
@@ -15,4 +20,4 @@ class Clicker extends Component {
   }
 }
 
-export default Clicker
+export default Clicker;
